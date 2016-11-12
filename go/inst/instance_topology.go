@@ -28,8 +28,8 @@ import (
 	"github.com/outbrain/orchestrator/go/config"
 )
 
-// getASCIITopologyEntry will get an ascii topology tree rooted at given instance. Ir recursively
-// draws the tree
+// getASCIITopologyEntry will get an ascii topology tree rooted at given
+// instance. It recursively draws the tree.
 func getASCIITopologyEntry(depth int, instance *Instance, replicationMap map[*Instance]([]*Instance), extendedOutput bool) []string {
 	if instance == nil {
 		return []string{}
