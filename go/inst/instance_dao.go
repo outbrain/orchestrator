@@ -99,7 +99,7 @@ func logReadTopologyInstanceError(instanceKey *InstanceKey, hint string, err err
 }
 
 func ReadTopologyInstanceUnbuffered(instanceKey *InstanceKey) (*Instance, error) {
-	return ReadTopologyInstance(instanceKey, config.Config.BufferInstanceWrites)
+	return ReadTopologyInstance(instanceKey, false)
 }
 
 // ReadTopologyInstance connects to a topology MySQL instance and reads its configuration and
