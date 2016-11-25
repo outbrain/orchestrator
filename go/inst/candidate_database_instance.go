@@ -17,6 +17,8 @@
 package inst
 
 import (
+	"fmt"
+
 	"github.com/outbrain/golib/sqlutils"
 
 	"github.com/outbrain/orchestrator/go/config"
@@ -28,6 +30,11 @@ type CandidateDatabaseInstance struct {
 	Hostname      string
 	Port          int
 	PromotionRule CandidatePromotionRule
+}
+
+// String returns a string representation of the CandidateDatabaseInstance struct
+func (cdi CandidateDatabaseInstance) String() string {
+	return fmt.Sprintf("%s:%d %s", cdi.Hostname, cdi.Port, cdi.PromotionRule)
 }
 
 // BulkReadCandidateDatabaseInstance returns a slice of
