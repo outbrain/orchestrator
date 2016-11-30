@@ -36,7 +36,7 @@ recovery itself.
 
 Authored by [Shlomi Noach](https://github.com/shlomi-noach)
 
-This project was originally initiated at [Outbrain](http://outbrain.com), who were kind enough to release it as open source in its very first days. Outbrain were also kind enough to permit the change of license from Apache 2.0 to MIT, the latter being even more permissible than the former.
+This project was originally initiated at [Outbrain](http://outbrain.com), who were kind enough to release it as open source in its very first days.
 
 The project was later developed at [Booking.com](http://booking.com) and the company was gracious enough to release further changes into the open source.
 
