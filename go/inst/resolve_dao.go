@@ -17,6 +17,8 @@
 package inst
 
 import (
+	"fmt"
+
 	"github.com/outbrain/golib/log"
 	"github.com/outbrain/golib/sqlutils"
 	"github.com/outbrain/orchestrator/go/config"
@@ -101,6 +103,7 @@ func ReadResolvedHostname(hostname string) (string, error) {
 	return resolvedHostname, err
 }
 
+// readAllHostnameResolves returns the content of the hostname_resolve table
 func readAllHostnameResolves() ([]HostnameResolve, error) {
 	res := []HostnameResolve{}
 	query := `
@@ -122,6 +125,49 @@ func readAllHostnameResolves() ([]HostnameResolve, error) {
 		log.Errore(err)
 	}
 	return res, err
+}
+
+// print a string list of all the hostname_resolve table entries
+func ShowAllHostnameResolves() {
+	res, err := readAllHostnameResolves()
+	if err == nil {
+		for _, r := range res{
+			fmt.Printf("%s %s\n", r.hostname, r.resolvedHostname)
+		}
+	}
+}
+
+// readAllHostnameUnresolves returns the content of the hostname_unresolve table
+func readAllHostnameUnresolves() ([]HostnameUnresolve, error) {
+	unres := []HostnameUnresolve{}
+	query := `
+		select
+			hostname,
+			unresolved_hostname
+		from
+			hostname_unresolve
+		`
+	err := db.QueryOrchestratorRowsMap(query, func(m sqlutils.RowMap) error {
+		hostnameUnresolve := HostnameUnresolve{hostname: m.GetString("hostname"), unresolvedHostname: m.GetString("unresolved_hostname")}
+
+		unres = append(unres, hostnameUnresolve)
+		return nil
+	})
+
+	if err != nil {
+		log.Errore(err)
+	}
+	return unres, err
+}
+
+// print a string list of all the hostname_unresolve table entries
+func ShowAllHostnameUnresolves() {
+	res, err := readAllHostnameUnresolves()
+	if err == nil {
+		for _, r := range res{
+			fmt.Printf("%s %s\n", r.hostname, r.unresolvedHostname)
+		}
+	}
 }
 
 // readUnresolvedHostname reverse-reads hostname resolve. It returns a hostname which matches given pattern and resovles to resolvedHostname,

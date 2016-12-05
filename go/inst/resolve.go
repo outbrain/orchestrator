@@ -33,6 +33,11 @@ type HostnameResolve struct {
 	resolvedHostname string
 }
 
+type HostnameUnresolve struct {
+	hostname           string
+	unresolvedHostname string
+}
+
 func init() {
 	if config.Config.ExpiryHostnameResolvesMinutes < 1 {
 		config.Config.ExpiryHostnameResolvesMinutes = 1

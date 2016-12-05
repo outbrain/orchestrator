@@ -1397,6 +1397,14 @@ func Cli(command string, strict bool, instance string, destination string, owner
 
 			fmt.Printf("%s\n", strings.Join(asciiPromotionRules, "\n"))
 		}
+	case registerCliCommand("show-resolve-hosts", "Meta, internal", `Show the content of the hostname_resolve table. Generally used for debugging`):
+		{
+			inst.ShowAllHostnameResolves()
+		}
+	case registerCliCommand("show-unresolve-hosts", "Meta, internal", `Show the content of the hostname_unresolve table. Generally used for debugging`):
+		{
+			inst.ShowAllHostnameUnresolves()
+		}
 		// Help
 	case "help":
 		{
