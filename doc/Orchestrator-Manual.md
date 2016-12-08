@@ -4,6 +4,8 @@
 
 This repository is no longer the upstream and latest version of `orchestrator`.
 
+The documentation in this repository is not up-to-date.
+
 ---
 
 [Table of Contents](#toc)

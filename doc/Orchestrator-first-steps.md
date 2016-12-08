@@ -4,6 +4,8 @@
 
 This repository is no longer the upstream and latest version of `orchestrator`.
 
+The documentation in this repository is not up-to-date.
+
 ---
 You have _Orchestrator_ installed and deployed. What can you do with it?
 

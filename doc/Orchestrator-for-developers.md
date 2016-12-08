@@ -4,6 +4,8 @@
 
 This repository is no longer the upstream and latest version of `orchestrator`.
 
+The documentation in this repository is not up-to-date.
+
 ---
 _Orchestrator_ is open source and accepts pull requests.
 
