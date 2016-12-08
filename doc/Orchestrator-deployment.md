@@ -1,3 +1,12 @@
+# orchestrator upstream has moved
+
+**NOTE**: `orchestrator` development is now active on https://github.com/github/orchestrator, where Issues and Pull Requests are accepted.
+
+This repository is no longer the upstream and latest version of `orchestrator`.
+
+The documentation in this repository is not up-to-date.
+
+---
 This text discusses deployment options for _orchestrator_.
 
 It is assumed you already know how to install _orchestrator_ on a production machine and how to configure it with a backend database. It is also assumed you have configured your MySQL servers to allow connections from _orchestrator_.

@@ -1,3 +1,13 @@
+# orchestrator upstream has moved
+
+**NOTE**: `orchestrator` development is now active on https://github.com/github/orchestrator, where Issues and Pull Requests are accepted.
+
+This repository is no longer the upstream and latest version of `orchestrator`.
+
+The documentation in this repository is not up-to-date.
+
+---
+
 ### Who should use orchestrator?
 
 DBAs and ops who have more than a mere single-master-single-slave replication topology.
