@@ -1,3 +1,10 @@
+# orchestrator upstream has moved
+
+**NOTE**: `orchestrator` development is now active on https://github.com/github/orchestrator, where Issues and Pull Requests are accepted.
+
+This repository is no longer the upstream and latest version of `orchestrator`.
+
+---
 _Orchestrator_ is open source and accepts pull requests.
 
 If you would like to build _orchestrator_ on your own machine, or eventually submit PRs, follow this guide.
